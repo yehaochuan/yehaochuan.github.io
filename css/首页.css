@@ -1,0 +1,176 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #181C28;
+    background-image: url(../img/bg.jfif);
+    background-size: 100% ;
+}
+#box{
+    width: 100%;
+    margin: 0 auto;
+}
+nav{
+    width: 90%;
+    height: 5rem;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 1.5rem -1.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+/* 旋转后的样式 */
+nav #daohang #d0{
+    color: orange;
+    text-decoration: none;
+}
+nav #daohang{
+    height: 100%; 
+}
+
+#png {
+    border-radius: 2rem;
+    height: 5rem;
+    font-size:1rem;
+    color: orange;
+    overflow: hidden;
+}
+
+#png  img{
+    height: 7rem;
+    border-radius: 3rem;
+    text-align: left;
+    margin-top: -1rem;
+}
+#png:hover {
+    overflow: initial;
+}
+#png:hover img{
+    width: 29rem;
+    height: 40rem;
+} 
+nav #daohang>div{
+    width:10%;
+    height: 100%;
+    text-align: center;
+    line-height: 5rem;
+    float: left;
+    position: relative;
+    /* 设置3d效果 */
+    transform-style: preserve-3d;
+    perspective-origin: center center;
+    transform-origin: center 5rem;
+    transition: all 0.2s;
+}
+
+nav #daohang>div>div[id*="d"]{
+    position: absolute;
+    width:100%;
+    height: 5rem;
+    top: 5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: orange;
+    font-weight: bold;
+  
+    /* 固定3d的位置 */
+    transform-style: preserve-3d;
+    transform-origin: center 0;
+    transform: rotateX(-90deg);
+}
+nav #daohang>div:last-child{
+    margin-left: 40%;
+}
+nav #daohang>#d:hover{
+    transform: rotateX(90deg) translateZ(5rem);
+} 
+
+
+
+
+
+
+
+section{
+    height: 600px;
+    border: 1px solid #000;
+    width:90%;
+    margin: 0 auto;
+    box-shadow: 1.5rem -1.5rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+
+
+
+#flex-box{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+
+
+#flex-box>div{
+    width: 140px;
+    border: 1px solid #000;
+    height: 140px;
+    margin: 2rem 2rem;
+    border-radius: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#flex-box>div:hover{
+    box-shadow: 1rem 1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media screen and (max-width: 1330px) {
+    html {
+      font-size: 13px;
+    }
+}
+@media screen and (max-width: 1130px) {
+    html {
+      font-size: 12px;
+    }
+}
+@media screen and (max-width: 930px) {
+    html {
+      font-size: 11px;
+    }
+}
+@media screen and (max-width: 830px) {
+    html {
+      font-size: 10px;
+    }
+}
+
+/*手机端*/
+@media screen and (max-width: 660px) {
+    html {
+      font-size: 8px;
+    }
+}
+
+
+
+
+
+
+
+/* 框架 箭头 */
+.fp-controlArrow.fp-next{
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
+}
+.fp-controlArrow.fp-prev{
+    border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
+}
