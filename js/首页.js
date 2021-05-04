@@ -1,4 +1,4 @@
-
+// 中部
 var mid=new Vue({
     el:"#box",
     data:{
@@ -50,6 +50,19 @@ var mid=new Vue({
   
 
 }) 
+
+
+
+
+  
+
+$(function(){
+  $('#dowebok').fullpage({
+      sectionsColor: [ 'rgba(0,0,0,0)', '#4BBFC3', '#7BAABE', '#f90']
+  });
+});
+
+
 
 
 
