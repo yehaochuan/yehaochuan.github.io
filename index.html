@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,57 +14,78 @@
 
 <link rel="stylesheet" href="css/首页.css">
 <script src="js/vue.js"></script>
-<body>  
-  
-    <div id="dowebok"> 
+
+<body>
+
+    <div id="dowebok">
         <div class="section">
-            <div class="slide">   
+            <div class="slide">
                 <div id="box">
-  
-                
-                <nav class = 'row'>
-                <!-- 头部导航1 -->
-                    <div id="daohang">
-                        <div id="logo" >
-                            <div id="png">  <img src="./img/1.jpg" alt=""></div>
+
+                <!-- 导航栏--开始-->
+                    <nav >
+                        <!-- 头部导航1 -->
+                        <div id="daohang" >
+                            <div id="logo">
+                                <div id="png"> <img src="./img/1.jpg" alt=""></div>
+                            </div>
+
+                            <div id="d" v-for="(item,index) in dh_arr">
+                                {{item}}
+                                <div id="d1"> <a v-bind:href="bankuai[index]" target="_top" id="d0">{{item}}</a></div>
+                            </div>
                         </div>
-            
-                        <div id="d" v-for="(item,index) in dh_arr" >
-                            {{item}}
-                            <div id="d1"> <a v-bind:href="bankuai[index]" target="_top" id="d0">{{item}}</a></div>
+                        <!-- 头部导航2-->
+                        <div id="daohang2">
+                            <div>
+                                <img src="./img/菜单.png" alt=""  @click='caidan()'>
+                                <div id="caidan_box">
+                                    <ul>
+                                        <li  v-for="(item,index) in dh_arr">{{item}}</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div>
+                            ^_^   好 川  ^_^
+                            </div>
+                            <div >
+                             <img src="./img/点赞 (1).png" alt="" id="dianzan" @click='dianzan($event)'><span>65</span>
+                             </div>
                         </div>
-                    </div>
-                 <!-- 头部导航2-->
+
+                    </nav>
+                <!-- 导航栏--结束-->
 
 
 
+                <!--主题部分内容--开始-->
+                    <section>
+                        <div id="flex-box">
+                            <div v-for="(item,index) in anli"><a v-bind:href="href_1[index]"><img v-bind:src="arr_src1[index]" alt=""><p>{{nr[index]}}</p></a> </div>
+                        </div>
+                    </section>
+                <!--主题部分内容--开始-->
 
 
-                </nav>
-                <section >
-                    <div id="flex-box"  >
-                            <div  v-for="(item,index) in anli"> </div>
-                    </div>
-            
-            
-                </section>
-            
-            
-            
-            
-            
-                </div></div>
-            <div class="slide"><h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3></div>
-            <div class="slide"><h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3></div>
+
+                </div>
+            </div>
+            <div class="slide">
+                <h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3>
+            </div>
+            <div class="slide">
+                <h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3>
+            </div>
         </div>
         <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
         <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
         <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
-        
+
     </div>
-    </body>
+</body>
 
 
 
 <script src="js/首页.js"></script>
+
 </html>
