@@ -293,3 +293,18 @@ section{
 .fp-controlArrow.fp-prev{
     border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
 }
+
+
+
+
+
+
+
+
+/* 框架 箭头 */
+.fp-controlArrow.fp-next{
+    border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
+}
+.fp-controlArrow.fp-prev{
+    border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
+}
