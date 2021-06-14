@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,310 +8,8 @@
 <link rel="stylesheet" href="css/jquery.fullPage.css">
 <script src="js/jquery.min.js"></script>
 <script src="js/jquery.fullPage.min.js"></script>
-    <script src="js/vue.js"></script>
-
-<style>
-    *{
-    padding: 0;
-    margin: 0;
-}
-body{
-  
-    background-image: url(../img/bg.jfif);
-    background-size: 100% ;
-    background-color: orange;
-
-}
-#box{
-    width: 100%;
-    margin: 0 auto;
-}
-img{
-    vertical-align: middle;
-}
-
-
-
-
-
-
-/*头部导航栏-----------------------------------*/
-nav{
-    width: 90%;
-    height: 5rem;
-    margin: 0 auto;
-    color: white;
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.8);
-    box-shadow: 1.5rem -1.5rem 6rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-nav #daohang #d0{
-    color: orange;
-    text-decoration: none;
-}
-nav #daohang{
-    height: 100%; 
-}
-/*头部导航栏----------------------------------------*/
-
-
-
-
-
-/* 导航内照片的样式--------------------------------- */
-#png {
-    border-radius: 2rem;
-    height: 5rem;
-    font-size:1rem;
-    color: orange;
-    overflow: hidden;
-}
-#png  img{
-    height: 7rem;
-    border-radius: 3rem;
-    text-align: left;
-    margin-top: -1rem;
-}
-#png:hover {
-    overflow: initial;
-}
-#png:hover img{
-    width: 29rem;
-    height: 40rem;
-} 
-/* 导航内照片的样式---------------------------------------- */
-
-
-
-
-/* 导航内的每个小菜单------------------------------------- */
-nav #daohang>div{
-    width:10%;
-    height: 100%;
-    text-align: center;
-    line-height: 5rem;
-    float: left;
-    position: relative;
-    /* 设置3d效果 */
-    transform-style: preserve-3d;
-    perspective-origin: center center;
-    transform-origin: center 5rem;
-    transition: all 0.2s;
-}
-nav #daohang>div>div[id*="d"]{
-    position: absolute;
-    width:100%;
-    height: 5rem;
-    top: 5rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: orange;
-    font-weight: bold;
-    /* 固定3d的位置 */
-    transform-style: preserve-3d;
-    transform-origin: center 0;
-    transform: rotateX(-90deg);
-}
-nav #daohang>div:last-child{
-    margin-left: 40%;
-}
-nav #daohang>#d:hover{
-    transform: rotateX(90deg) translateZ(5rem);
-} 
-nav #daohang>div:nth-of-type(6){   display: none;  }
-
-/* 手机端导航 */
-#daohang2{
-    display: flex;
-    text-align: center;
-    line-height: 5rem;
-    background-color: #181C28;
-    display:none;
-}
-#daohang2 div:nth-of-type(1){
-    width: 5rem;
-    height: 5rem;
-    border-right: 1px solid #464953;
-  
-}
-#daohang2 div:nth-of-type(1) img{
-    width: 100%;
-    height: 5rem;
- 
-}
-#daohang2 div:nth-of-type(2){
-    height: 5rem;
-    width: calc(100% - 10rem);
-    font-size: 2rem;
-    color: orange;
-    font-family: '宋体';
-    font-weight: bold;
-}
-#daohang2 div:nth-of-type(3){
-    height: 5rem;
-    width: 5rem;
-    border-left: 1px solid #464953;
-    /* background-color: aqua; */
-}
-#daohang2 div:nth-of-type(3) img{
-    width: 3rem;
-    height: 3rem;
-    margin-top: 0.3rem;
-}
-#dianzan{
-    vertical-align: -0.6rem;
-    margin-top: 0.5rem;
-}
-#daohang2 #caidan_box{
-    position: absolute;
-    width: 20rem;
-    height: 54rem;
-    border: 1px solid #000;
-    background-color: rgba(0, 0, 0, 0.9);
-    display: none;
-    animation: run1 0.5s linear 0s forwards;
-}
-@keyframes run1{
-    0%{
-        width: 10rem;
-        height: 0;
-    }
-    100%{
-        width: 20rem;
-        height: 54rem;
-    }
-}
-#daohang2 #caidan_box li{
-        list-style: none;
-        border-bottom: 1px solid wheat;
-        font-weight: 800;
-        font-size: 1.2rem;
-        color: tomato;
- 
-        
-}
-/* 导航内的每个小菜单------------------------------------- */
-
-
-
-
-
-/* 主体部分---------------------------------------------- */
-section{
-    height: 600px;
-    /* border: 1px solid #000; */
-    width: 90%;
-    margin: 0 auto;
-    box-shadow: 1.5rem -1.5rem 6rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-#flex-box div img{
-    width: 100%;
-    height: 70%;
-    border-top-left-radius: 2rem;
-    border-top-right-radius: 2rem;
-}
-#flex-box a{
-    text-align: center;
-    text-decoration: none;
-    color: wheat;
-}
-#flex-box div p{
-    line-height:3rem
-}
-/* 主体部分---------------------------------------------- */
-
-
-
-
-
-
-
-/* 主体部分的内容-------------------------------------------- */
-#flex-box{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-}
-
-/* 每个内容的小div */
-#flex-box>div{
-    width: 10rem;
-    border: 1px solid #000;
-    height: 10rem;
-    margin: 2rem 2rem;
-    border-radius: 2rem;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-#flex-box>div:hover{
-    box-shadow: 1rem 1rem 0.5rem 0.1rem rgba(0, 0, 0, 0.5);
-}
-/* 主体部分的内容---------------------------------------------- */
-
-
-
-
-
-
-
-/* 媒体查询不同的屏幕宽度下的显示大小 ---------------------------*/
-@media screen and (max-width: 1330px) {
-    html {
-      font-size: 15px;
-    }
-}
-@media screen and (max-width: 1130px) {
-    html {
-      font-size: 14px;
-    }
-}
-@media screen and (max-width: 930px) {
-    html {
-      font-size: 13px;
-    }
-}
-@media screen and (max-width: 830px) {
-    html {
-      font-size: 12px;
-  
-    }
-    nav #daohang>div:nth-of-type(4){   display: none;  }
-    nav #daohang>div:nth-of-type(5){   display: none;  }
-    nav #daohang>div:nth-of-type(6){   display: block;  }
-}
-
-/*手机端*/
-@media screen and (max-width: 680px) {
-    html {
-      font-size: 11px;
-    }
-    #daohang{display: none;}
-    #daohang2{display: flex;}
-    
-}
-/* 媒体查询不同的屏幕宽度下的显示大小 ----------------------------*/
-
-
-
-
-
-
-
-
-
-/* 框架 箭头 */
-.fp-controlArrow.fp-next{
-    border-color: transparent transparent transparent rgba(0, 0, 0, 0.5);
-}
-.fp-controlArrow.fp-prev{
-    border-color: transparent rgba(0, 0, 0, 0.5) transparent transparent;
-}
-
-
-</style>
-
-
-
+<link rel="stylesheet" href="css/首页.css">
+<script src="js/vue.js"></script>
 
 <body>
 
@@ -321,51 +18,82 @@ section{
             <div class="slide">
                 <div id="box">
 
-                <!-- 导航栏--开始-->
-                    <nav >
-                        <!-- 头部导航1 -->
-                        <div id="daohang" >
-                            <div id="logo">
-                                <div id="png"> <img src="./img/1.jpg" alt=""></div>
+                    <!-- 头部--开始-->
+                    <header>
+                        <!-- 写轮眼小动画 -->
+                        <div id="eye">
+                            <div id="bot1">
+                                <div id="bot2"></div>
                             </div>
-
-                            <div id="d" v-for="(item,index) in dh_arr">
-                                {{item}}
-                                <div id="d1"> <a v-bind:href="bankuai[index]" target="_top" id="d0">{{item}}</a></div>
-                            </div>
+                            <div id="d1"></div>
+                            <div id="d2"></div>
+                            <div id="d3"></div>
                         </div>
-                        <!-- 头部导航2-->
-                        <div id="daohang2">
-                            <div>
-                                <img src="./img/菜单.png" alt=""  @click='caidan()'>
-                                <div id="caidan_box">
-                                    <ul>
-                                        <li  v-for="(item,index) in dh_arr">{{item}}</li>
-                                    </ul>
+                        <!-- 欢迎文字 -->
+                        <span class="welcome">HOME PAGE &ensp;&ensp;好川</span>
+                        <!-- 头像 -->
+                        <div id="myphoto">
+                               --- <br>
+                               头像图片
+                            <div id="rotatebox"></div>
+                        </div>
+                   
+                        <!-- 导航栏 -->
+                        <div id="nav">
+                            <div class="daohang">
+
+                                <div class="start_3d">
+                                    简&emsp;历
+                                    <div class="3d_end"> <a v-bind:href=# target="_top">简&emsp;历</a></div>
                                 </div>
+                                <div class="start_3d">
+                                    博&emsp;客
+                                    <div class="3d_end"> <a v-bind:href=# target="_top">博&emsp;客</a></div>
+                                </div>
+                                <div class="start_3d">
+                                    联系我
+                                    <div class="3d_end"> <a v-bind:href=# target="_top">联系我</a></div>
+                                </div>
+                                <div class="start_3d">
+                                    案例-->
+                                    <div class="3d_end"> <a v-bind:href=# target="_top">案例--></a></div>
+                                </div>
+
+
+
                             </div>
-                            <div>
-                            ^_^   好 川  ^_^
-                            </div>
-                            <div >
-                             <img src="./img/点赞 (1).png" alt="" id="dianzan" @click='dianzan($event)'><span>65</span>
-                             </div>
+
+
+
+
                         </div>
+                    </header>
+                    <!-- 头部--结束-->
 
-                    </nav>
-                <!-- 导航栏--结束-->
+                    <!--主题部分内容--开始-->
+                    <main>
+                        <!-- <div id="fullbox">
+                            <div><img src="./img/full-1.jpg" alt=""><span>&emsp;教育背景 
+                                <div class="content">
+                                    <div class="content_one"> 毕业学校： 武昌工学院 </div>   <div class="content_one">学&emsp;&emsp;历 ：本科</div> <div class="content_one">专&emsp;&emsp;业 ：软件工程</div><div class="content_one">2017.09-2021.06</div>
+                                </div>  </span></div>
+                            <div><img src="./img/full-2.jpg" alt=""><span>&emsp;专业技能 <div class="content"></div>  </span></div>
+                            <div><img src="./img/full-3.jpg" alt=""><span>&emsp;兴趣爱好 <div class="content"></div>  </span></div>
+                            <div><img src="./img/full-4.jpg" alt=""><span>&emsp;项目经验 <div class="content"></div>  </span></div>
+                            <div><img src="./img/full-5.jpg" alt=""><span>&emsp;工作经验 <div class="content"></div>  </span></div>
+                            <div><img src="./img/full-6.jpg" alt=""><span>&emsp;毕业设计 <div class="content"></div>  </span></div>
+                        </div> -->
+                        <div class="hello">H E L L O </div>
+                        <div class="welcometo">w e l c o m e&emsp; t o &emsp;m y &emsp;w e b s i t e</div>
+                        <div class="my">I &emsp;am&emsp; a&emsp; WEB&emsp; Engineer</div>
+                    </main> 
+                    <!--主题部分内容--结束-->
+                    
+                    <!-- 尾部  --开始 -->
+                    <footer>
 
-
-
-                <!--主题部分内容--开始-->
-                    <section>
-                        <div id="flex-box">
-                            <div v-for="(item,index) in anli"><a v-bind:href="href_1[index]"><img v-bind:src="arr_src1[index]" alt=""><p>{{nr[index]}}</p></a> </div>
-                        </div>
-                    </section>
-                <!--主题部分内容--开始-->
-
-
+                    </footer>
+                    <!-- 尾部  --结束 -->
 
                 </div>
             </div>
@@ -386,69 +114,14 @@ section{
 
 
 <script>
-    // 中部
-var mid=new Vue({
-    el:"#box",
-    data:{
-      
-      //头部数据
-      dh_arr:["css3动画","小游戏","canavs动画","项目",'查看更多',"CSDN博客"],
-       
-      anli:["","","","","","","","",""],
-      arr_src1:['./img/css3-1.png','./img/css3-2.png','./img/css3-3.png','./img/css3-4.png','./img/css3-5.png','./img/css3-6.png'],
-      nr:["css3-手风琴","css3-快乐星球",'css3-核反应堆','css3-Iron man','css3-血轮眼',"css3-地爆天星"],
-      href_1:["./css3/手风琴/index.html","./css3/星球/index.html","./css3/Iron man/iron.html","./css3/Iron man/iron.html","./css3/血轮眼/demo.html","./css3/地爆天星/index.html"],
-          bankuai:["",
-                  "",
-                  "",
-                  "",
-                  "",
-                
-          ],
 
 
 
-          bool : true,
-        
-        },
-
-            
-
- 
-    
-    methods:{
-           dianzan:function(event){
-               var e = event.currentTarget;
-                e.src="./img/点赞 (2).png"
-                e.nextSibling.innerText++;
-           },
-           caidan:function(){
-              if(this.bool){
-                  caidan_box.style.display='block';
-              }else{
-                caidan_box.style.display='none';
-              }
-               this.bool = !this.bool;
-               
-
-           }
-
-
-    },
-  
-
-}) 
-
-
-
-
-  
-
-$(function(){
-  $('#dowebok').fullpage({
-      sectionsColor: [ 'rgba(0,0,0,0)', '#4BBFC3', '#7BAABE', '#f90']
-  });
-});
+    $(function () {
+        $('#dowebok').fullpage({
+            sectionsColor: ['rgba(0,0,0,0)', '#4BBFC3', '#7BAABE', '#f90'],
+        });
+    });
 
 
 
