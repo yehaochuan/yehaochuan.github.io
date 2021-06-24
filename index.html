@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
 <link rel="stylesheet" href="css/首页.css">
 <script src="js/vue.js"></script>
 
-<body>
+<body class="bg1">
 
     <div id="dowebok">
         <div class="section">
@@ -32,11 +33,7 @@
                         <!-- 欢迎文字 -->
                         <span class="welcome">HOME PAGE &ensp;&ensp;好川</span>
                         <!-- 头像 -->
-                        <div id="myphoto">
-                               --- <br>
-                               头像图片
-                            <div id="rotatebox"></div>
-                        </div>
+                        
                    
                         <!-- 导航栏 -->
                         <div id="nav">
@@ -83,15 +80,42 @@
                             <div><img src="./img/full-5.jpg" alt=""><span>&emsp;工作经验 <div class="content"></div>  </span></div>
                             <div><img src="./img/full-6.jpg" alt=""><span>&emsp;毕业设计 <div class="content"></div>  </span></div>
                         </div> -->
-                        <div class="hello">H E L L O </div>
-                        <div class="welcometo">w e l c o m e&emsp; t o &emsp;m y &emsp;w e b s i t e</div>
-                        <div class="my">I &emsp;am&emsp; a&emsp; WEB&emsp; Engineer</div>
+                        <!-- <div class="hello">H E L L O </div> -->
+                        <div class="mian_content">
+                       <div id="photo">
+                             <div id="myphoto">
+                                --- <br>
+                                头像图片
+                             <div id="rotatebox"></div>
+                         </div>
+                       </div>     
+                      
+
+                            <div class="welcometo">w e l c o m e&emsp; t o &emsp;m y &emsp;w e b s i t e</div>
+                            <span class="engineer">  I am web engineer</span>
+                            <div class="option_btn">
+                                <div class="selected"></div> <div> </div> <div> </div>
+                            </div>
+                        </div>
+                       
+                        <!-- <div class="my">I &emsp;am&emsp; a&emsp; WEB&emsp; Engineer</div>  -->
                     </main> 
                     <!--主题部分内容--结束-->
                     
                     <!-- 尾部  --开始 -->
                     <footer>
-
+                        <div class="footer_content">
+                            <table>
+                                <tr>
+                                    <td>Q Q :</td><td>1005213815</td>  
+                                    <td>联系电话 :</td><td>15972787263</td>
+                                    <td>邮 箱 :</td><td>1005213815@qq.com</td>
+                                </tr>
+                                <tr>
+                                  <!-- 喜欢CSS3动画或vue的小伙伴可以联系我哦  来一起探讨技术吧 -->
+                                </tr>
+                            </table>
+                        </div>
                     </footer>
                     <!-- 尾部  --结束 -->
 
@@ -126,5 +150,5 @@
 
 
 </script>
-
+<script src="./js/首页.js"></script>
 </html>
