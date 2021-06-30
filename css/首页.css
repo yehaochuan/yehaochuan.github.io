@@ -5,7 +5,9 @@
     body{
         background-size: 100% ;
     }
-
+    :root,html{
+        font-size: 16px;
+    }
     .bg1{
         background-image: url(../img/1.jpeg);
     }
@@ -16,13 +18,16 @@
         background-image: url(../img/3.jpeg);
     }
     #box{
-        width: 100rem;
+        width: 100%;
         margin: 0 auto;
+        height: 100%;
+        background-repeat: no-repeat;
+        position: relative;
     }
 
 
     header{
-        height: 90px;
+        height: 5rem;
         position: relative;
         /* background-color: tomato; */
         width: 100rem;
@@ -32,7 +37,7 @@
         color: orange;
         font-size: 2rem;
         font-weight: 500;
-        line-height: 90px;
+        line-height: 8.5rem;
         display: inline-block;
         position: absolute;
         left: 17rem;
@@ -54,8 +59,8 @@
 
     /* 小图标---写轮眼 start*/
     #eye{
-        width: 400px;
-        height: 400px;
+        width: 25rem;
+        height: 25rem;
         border: 3px solid #000;
         background-color: rgb(214, 140, 140);
         position: absolute;
@@ -66,22 +71,22 @@
         transition: all 2s;
     }
     #bot1{
-        width: 200px;
-        height: 200px;
+        width: 12.5rem;
+        height: 12.5rem;
         border: 2px solid #000;
-        margin: 96px auto;
+        margin: 6rem auto;
         animation: run_eye_son 3s forwards;
     }
     #bot2{
-        width: 100px;
-        height: 100px;
-        margin: 50px auto;
+        width: 6.25rem;
+        height: 6.25rem;
+        margin: 3.15rem auto;
         background-color:#000;
         animation: run_eye_son 3s forwards;
     }
     #eye>[id*='d']{
-        width: 30px;
-        height: 30px;    
+        width: 2.9rem;
+        height: 2.9rem;    
         position: absolute;
         background-color: black;
         opacity: 0;
@@ -89,26 +94,26 @@
     }
     #d1{
         border-radius: 0 50% 50% 50%;
-        top: 100px;
-        left: 125px;
+        top: 6.25rem;
+        left: 7.8rem;
     }
     #d2{
         border-radius: 50% 50% 50% 0;
-        top: 280px;
-        left: 158px;
+        top: 17.5rem;
+        left: 10.5rem;
     }
     #d3{
         border-radius: 50% 0 50%  50% ;
-        top: 178px;
-        left: 285px;
+        top: 11.125rem;
+        left: 17.8rem;
     }
     @keyframes run_eye{
         0%{}
         100%{
             background-color:red;
             transform:scale(0.2) rotate(360deg);
-            box-shadow: 0px 0px 40px 0px red,
-                        inset 0px 0px 45px 5px wheat;
+            box-shadow: 0px 0px 2.2rem 0px red,
+                        inset 0px 0px 2.6rem 5px wheat;
                         border-radius: 50%;
         }
     }
@@ -116,7 +121,7 @@
         0%{}
         100%{
             display: block;
-            box-shadow: 0px 0px 40px 0px wheat;
+            box-shadow: 0px 0px 2.2rem 0px wheat;
             border-radius: 50%;
         }
     }
@@ -124,7 +129,7 @@
         0%{}
         100%{
         opacity: 1;
-        box-shadow: 0px 0px 40px 0px wheat;
+        box-shadow: 0px 0px 2.2rem 0px wheat;
         }
     }
     /* 小图标---写轮眼 over*/
@@ -137,8 +142,8 @@
     /* 导航nav   start */
     .daohang{
         width: 40%;
-        height:50px;
-        margin-left: 500px;
+        height:3.1rem;
+        margin-left: 31rem;
         position: relative;
         left: 20%;
         top: 3rem;
@@ -149,12 +154,12 @@
         width: 25%;
         height: 100%;
         text-align: center;
-        line-height: 50px;
+        line-height: 3.1rem;
         /* 设置3d效果 */
         transform-style: preserve-3d;
         float: left;
         perspective-origin: center center;
-        transform-origin: center 50px;
+        transform-origin: center 3.1rem;
         transition: all 0.2s;
         color: orange;
         /* border-right: 1px solid orange; */
@@ -164,8 +169,8 @@
     .daohang>div>div{
         /* border-right: 1px solid orange; */
         width: 100%;
-        height: 50px;
-        top: 50px;
+        height: 3.1rem;
+        top: 3.1rem;
         background-color: rgba(0, 0, 0, 0.5);
         color: orange;
         font-weight: bold;
@@ -178,8 +183,13 @@
 
     }
     .daohang>.start_3d:hover{
-        transform: rotateX(90deg) translateZ(50px);
+        transform: rotateX(90deg) translateZ(3.1rem);
     } 
+    
+    .start_3d>div>a{
+        text-decoration: none;
+        color: orange;
+    }
     /* 导航nav   end  */
 
 
@@ -218,7 +228,9 @@
         margin-left:1rem;
         margin-top:1rem;
         position: absolute;
-        box-shadow: -3px  -3px 16px 2px rgba(0,0,0,.5);
+        box-shadow: -3px  -3px 1rem 2px rgba(0,0,0,.5);
+        background-image: url(../img/photo.jpg);
+        background-size: 100%;
     }
     #rotatebox{
         width:8rem;
@@ -238,76 +250,7 @@
     }
 
 
-/* 手风琴  盒子  */
-    #fullbox{
-        width:700px;
-        height: 300px;
-        /* border: 1px solid #000; */
-        overflow: hidden;
-        box-shadow: 0px 0px 5px 1px black;
-        transition: all 1s;
-        position: absolute;
-        top: 8rem;
-        left:5rem;
-    }
-    #fullbox>div {
-        height: 100%;
-        float: left;
-        width: 16.6%;   
-        box-shadow: -3px 0px 5px 2px black;
-        position: relative;
-        transition: all 1s;
-    }
-    #fullbox>div>img{
-        height: 100%;
-    }
-    #fullbox:hover>div{
-        width: 6%;   
-    }
-    #fullbox>div:hover{
-        width: 70%;
-        box-shadow: -5px 0px 10px 1px rgb(77, 178, 245);
-    }
-    #fullbox>div:hover .content{
-        margin-top: 0px;
-    }
-    #fullbox span{
-        width: 497px;
-        position: absolute;
-        left: 0px;
-        height: 400px;
-        top: 0px;
-        background:rgba(0, 0, 0, 0.5);
-        line-height: 40px;
-        color: orange;
-        font-size: 14px;
-        font-weight: bold;
-        transition:  all 2s;
-    }
 
-    #fullbox span:hover{
-        background-color: rgba(0, 0, 0, 0);;
-    }
-    #fullbox span> .content{
-        width: 80%;
-        margin: 0 auto;
-        height: 200px;
-        /* background-color: rgba(147, 206, 245,0.4); */
-        margin-top: 300px;
-        transition: all 2s;
-    }
-    #fullbox span> .content>.content_one{
-        border: 3px solid rgb(248, 225, 17);
-        display: inline-block;
-        border-radius: 20px;
-        font-size: 14px;
-        color: orange;
-        width: 40%;
-        margin: 3% 3%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.5);
-        box-shadow: 2px 2px 6px 0.5px rgba(248, 225, 17,.6);
-    }
 
 
     
@@ -336,6 +279,7 @@
         font-size: 1.8rem;
         color: wheat;
         line-height: 3rem;
+        background-color: rgba(0, 0, 0, 0.5);
         text-shadow:  1px  1px  10px #000;
         top: 15rem;
         border-radius: 1.5rem;
@@ -357,8 +301,8 @@
         line-height: 2.2rem;
         line-height: 2.2rem;
         border: 2px solid orange;
-        box-shadow: inset -3px -3px  22px 2px  #000 ,
-                           2px 2px  10px 1px  rgba(240, 167, 9, 0.5) ; 
+        box-shadow: inset -3px -3px  1.5rem 2px  #000 ,
+                           2px 2px  0.6rem 1px  rgba(240, 167, 9, 0.5) ; 
 
     }
     main .my{
@@ -388,19 +332,24 @@
     footer{
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        height: 3rem;
-        position: fixed;
+        height: 4rem;
+        position: absolute;
+        text-align: center;
         bottom: 0;
     }
     .footer_content{
         width: 60rem;
-        margin: 0 auto;
-        margin-top: 10px;
+        text-align: center;
+        margin-top: 4px;
         color: wheat;
+        height: 100%;
+        margin-left: 20rem;
     }
     .footer_content table{
-        margin: 0 auto;
+        line-height: 1.2rem;
         color: slategrey;
+        height: 100%;
+        margin: 0 auto;
     }
     .footer_content table tr td:nth-of-type(even){
         width: 10rem;
@@ -408,8 +357,18 @@
     .footer_content table tr td:nth-of-type(odd){
         width: 5rem;
     }
-
- 
+    .xx{
+        text-align: center;
+        font-size: 0.8rem;
+        color: rgb(252, 210, 134);
+        animation: run_text  1s infinite;
+    }
+    @keyframes run_text{
+        0%{}
+        100%{
+            text-shadow: 0px 0px 10px orange;
+        }
+    }
 
 
 
@@ -437,7 +396,64 @@
 
     /* 适配工作  -- 媒体查询 */
 
-    /* @media screen {
-        
-    } */
-        
+
+    @media screen and (max-width: 2000px) {
+        :root,html{
+            font-size: 20px;
+        }
+    }
+    @media screen and (max-width: 1900px) {
+        :root,html{
+            font-size: 19px;
+        }
+    }
+    @media screen and (max-width: 1800px) {
+        :root,html{
+            font-size: 18px;
+        }
+    }
+    @media screen and (max-width: 1700px) {
+        :root,html{
+            font-size: 17px;
+        }
+    }
+    @media screen and (max-width: 1600px) {
+        :root,html{
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 1500px) {
+        :root,html{
+            font-size: 15px;
+        }
+    }
+    @media screen and (max-width: 1400px) {
+        :root,html{
+            font-size: 14px;
+        }
+    }
+    @media screen and (max-width: 1300px) {
+        :root,html{
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        :root,html{
+            font-size: 12px;
+        }
+    }
+    @media screen and (max-width: 1100px) {
+        :root,html{
+            font-size: 11px;
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        :root,html{
+            font-size: 10px;
+        }
+    }
+    @media screen and (max-width: 900px) {
+        :root,html{
+            font-size: 9px;
+        }
+    }     
