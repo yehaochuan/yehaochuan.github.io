@@ -1,154 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<link rel="stylesheet" href="css/jquery.fullPage.css">
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>
-<link rel="stylesheet" href="css/首页.css">
-<script src="js/vue.js"></script>
+  </head>
+  <link rel="stylesheet" href="css/jquery.fullPage.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.fullPage.min.js"></script>
+  <link rel="stylesheet" href="css/首页.css" />
+  <link rel="stylesheet" href="css/界面2.css" />
+  <link rel="stylesheet" href="css/界面3.css" />
+  <script src="js/vue.js"></script>
 
-<body class="bg1">
-
+  <body class="bg1">
     <div id="dowebok">
-        <div class="section">
-            <div class="slide">
-                <div id="box">
+      <div class="section">
+        <div class="slide">
+          <div id="box">
+            <!-- 头部--开始-->
+            <header>
+              <!-- 写轮眼小动画 -->
+              <div id="eye">
+                <div id="bot1">
+                  <div id="bot2"></div>
+                </div>
+                <div id="d1"></div>
+                <div id="d2"></div>
+                <div id="d3"></div>
+              </div>
+              <!-- 欢迎文字 -->
+              <span class="welcome">HOME PAGE &ensp;&ensp;好川</span>
+              <!-- 头像 -->
 
-                    <!-- 头部--开始-->
-                    <header>
-                        <!-- 写轮眼小动画 -->
-                        <div id="eye">
-                            <div id="bot1">
-                                <div id="bot2"></div>
-                            </div>
-                            <div id="d1"></div>
-                            <div id="d2"></div>
-                            <div id="d3"></div>
-                        </div>
-                        <!-- 欢迎文字 -->
-                        <span class="welcome">HOME PAGE &ensp;&ensp;好川</span>
-                        <!-- 头像 -->
-                        
-                   
-                        <!-- 导航栏 -->
-                        <div id="nav">
-                            <div class="daohang">
+              <!-- 导航栏 -->
+              <div id="nav">
+                <div class="daohang">
+                  <div class="start_3d">
+                    简&emsp;历
+                    <div class="3d_end fp-prev jili_right" >
+                      简&emsp;历
+                    </div>
+                  </div>
+                  <div class="start_3d">
+                    博&emsp;客
+                    <div class="3d_end">
+                        <a href="https://blog.csdn.net/weixin_42232622">博&emsp;客</a>  
+                    </div>
+                  </div>
+                  <div class="start_3d">
+                    联系我
+                    <div class="3d_end lianxi" >
+                      联系我
+                    </div>
+                  </div>
+                  <div class="start_3d">
+                    案例-->
+                    <div class="3d_end anli" >
+                      案例-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </header>
+            <!-- 头部--结束-->
 
-                                <div class="start_3d">
-                                    简&emsp;历
-                                    <div class="3d_end"> <a v-bind:href=# target="_top">简&emsp;历</a></div>
-                                </div>
-                                <div class="start_3d">
-                                    博&emsp;客
-                                    <div class="3d_end"> <a v-bind:href=# target="_top">博&emsp;客</a></div>
-                                </div>
-                                <div class="start_3d">
-                                    联系我
-                                    <div class="3d_end"> <a v-bind:href=# target="_top">联系我</a></div>
-                                </div>
-                                <div class="start_3d">
-                                    案例-->
-                                    <div class="3d_end"> <a v-bind:href=# target="_top">案例--></a></div>
-                                </div>
+            <!--主题部分内容--开始-->
+            <main>
+              <!-- <div class="hello">H E L L O </div> -->
+              <div class="mian_content">
+                <div id="photo">
+                  <div id="myphoto">
+                    <div id="rotatebox"></div>
+                  </div>
+                </div>
 
+                <div class="welcometo">
+                  w e l c o m e&emsp; t o &emsp;m y &emsp;w e b s i t e
+                </div>
+                <span class="engineer"> I am web engineer</span>
+                <div class="option_btn">
+                  <div class="selected"></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
 
+              <!-- <div class="my">I &emsp;am&emsp; a&emsp; WEB&emsp; Engineer</div>  -->
+            </main>
+            <!--主题部分内容--结束-->
 
-                            </div>
-
-
-
-
-                        </div>
-                    </header>
-                    <!-- 头部--结束-->
-
-                    <!--主题部分内容--开始-->
-                    <main>
-                        <!-- <div id="fullbox">
-                            <div><img src="./img/full-1.jpg" alt=""><span>&emsp;教育背景 
-                                <div class="content">
-                                    <div class="content_one"> 毕业学校： 武昌工学院 </div>   <div class="content_one">学&emsp;&emsp;历 ：本科</div> <div class="content_one">专&emsp;&emsp;业 ：软件工程</div><div class="content_one">2017.09-2021.06</div>
-                                </div>  </span></div>
-                            <div><img src="./img/full-2.jpg" alt=""><span>&emsp;专业技能 <div class="content"></div>  </span></div>
-                            <div><img src="./img/full-3.jpg" alt=""><span>&emsp;兴趣爱好 <div class="content"></div>  </span></div>
-                            <div><img src="./img/full-4.jpg" alt=""><span>&emsp;项目经验 <div class="content"></div>  </span></div>
-                            <div><img src="./img/full-5.jpg" alt=""><span>&emsp;工作经验 <div class="content"></div>  </span></div>
-                            <div><img src="./img/full-6.jpg" alt=""><span>&emsp;毕业设计 <div class="content"></div>  </span></div>
-                        </div> -->
-                        <!-- <div class="hello">H E L L O </div> -->
-                        <div class="mian_content">
-                       <div id="photo">
-                             <div id="myphoto">
-                                --- <br>
-                                头像图片
-                             <div id="rotatebox"></div>
-                         </div>
-                       </div>     
-                      
-
-                            <div class="welcometo">w e l c o m e&emsp; t o &emsp;m y &emsp;w e b s i t e</div>
-                            <span class="engineer">  I am web engineer</span>
-                            <div class="option_btn">
-                                <div class="selected"></div> <div> </div> <div> </div>
-                            </div>
-                        </div>
-                       
-                        <!-- <div class="my">I &emsp;am&emsp; a&emsp; WEB&emsp; Engineer</div>  -->
-                    </main> 
-                    <!--主题部分内容--结束-->
-                    
-                    <!-- 尾部  --开始 -->
-                    <footer>
-                        <div class="footer_content">
-                            <table>
-                                <tr>
-                                    <td>Q Q :</td><td>1005213815</td>  
-                                    <td>联系电话 :</td><td>15972787263</td>
-                                    <td>邮 箱 :</td><td>1005213815@qq.com</td>
-                                </tr>
-                                <tr>
-                                  <!-- 喜欢CSS3动画或vue的小伙伴可以联系我哦  来一起探讨技术吧 -->
-                                </tr>
-                            </table>
-                        </div>
-                    </footer>
-                    <!-- 尾部  --结束 -->
+            <!-- 尾部  --开始 -->
+            <footer>
+              <div class="footer_content">
+                <table>
+                  <tr>
+                    <td>Q Q :</td>
+                    <td>1005213815</td>
+                    <td>联系电话 :</td>
+                    <td>15972787263</td>
+                    <td>邮 箱 :</td>
+                    <td>1005213815@qq.com</td>
+                  </tr>
+                  <tr>
+                    <td colspan="6" class="xx">
+                      喜欢 C S S 3 动画或 v u e
+                      的小伙伴可以联系我哦~一起探讨技术吧！！
+                    </td>
+                  </tr>
+                  <tr>
+                    <!-- 喜欢CSS3动画或vue的小伙伴可以联系我哦  来一起探讨技术吧 -->
+                  </tr>
+                </table>
+              </div>
+            </footer>
+            <!-- 尾部  --结束 -->
+          </div>
+        </div>
+        <div class="slide">
+          <div class="my_information">个人信息</div>
+          <div id="fullbox">
+            <div>
+              <img src="./img/full-1.jpg" alt="" /><span
+                >&emsp;基本信息
+                <div class="content">
+                  <div class="content_one">学校： 武昌工学院</div>
+                  <div class="content_one">学&emsp;&emsp;历 ：本科</div>
+                  <div class="content_one">专&emsp;&emsp;业 ：软件工程</div>
+                  <div class="content_one">2017.09-2021.06</div>
+                  <div class="content_one">电话：15972787263</div>
+                  <div class="content_one">邮箱：1005213815@qq.com</div>
+                  <div class="content_one">微信号：yhc00101</div>
+                </div>
+              </span>
+            </div>
+            <div>
+              <img src="./img/full-2.jpg" alt="" /><span
+                >&emsp;专业技能
+                <div class="content">
+                  <div class="content_two center">专业技能</div>
+                  <br />
+                  <div class="content_two">
+                    1. 熟练掌握 HTML5、CSS3 开发符合 W3C 标准的前端页面；<br />
+                    2. 熟练使用 Vue 全家桶，会使用 vue
+                    框架及模块化设计思想构建网站；<br />
+                    3. 熟练使用 jQuery 及 Ajax 技术完成前后端交互； <br />
+                    4. 熟练运用 bootstrap、element UI 前端 UI
+                    框架去构建网站；<br />
+                    5. 熟悉使用 CSS 预处理 Less、Sass 预处理语言； <br />
+                    6. 熟悉微信小程序开发，能够根据要求开发微信小程序; <br />
+                    7. 熟悉 node.js，能够使用 express 搭配 MySQL 或 mongodb
+                    搭建服务端； <br />
+                    8. 熟悉使用 Webpack 打包工具进行项目的打包；<br />
+                    9. 有一定的CSS3动画的制作能力；
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div>
+              <img src="./img/full-3.jpg" alt="" /><span
+                >&emsp;兴趣爱好
+                <div class="content">
+                  <div class="content_one">博客</div>
+                  <div class="content_one">球类运动</div>
+                  <div class="content_one">健身</div>
+                  <div class="content_one">css3 3d小动画</div>
+                </div>
+              </span>
+            </div>
+            <div>
+              <img src="./img/full-4.jpg" alt="" /><span
+                >&emsp;项目经验
+                <div class="content">
+                  <div class="content_three">前台界面</div>
+                  <div class="content_three">后台管理系统</div>
+                  <div class="content_four " valign='center'>
+                    项目名称：<span class="orange">宝骐广告用户界面</span> <br>
+                    应用技术： jQuery、CSS3
+                    动画、媒体查询和 bootstrap 栅格<br>
+                    项目描述：用于宣传和展示的信息，使用 css3 动画和 bootstrap来美化页面，同时要提过栅格系统，和媒体查 询，实现 pc和手机的适配工作。 
+                    <br>职责描述：1.实现页面基本布局，和通过bootstrap 进行栅格系统和媒体查询，实现所有所有设备的适配。通过 css3 动画和 bootstrap 的组件，实现对应需求。<br>
+                    项目名称：<span class="orange">京师乐学移动端界面</span><br>应用技术： CSS3动画、媒体查询和 bootstrap 栅格 
+                    <br>项目描述：通过 rem进行布局实现，和 bootstrap组件，实现京师乐学移动端宣传移动端页面。<br>
+                    职责描述：移动端全部静态页面的实现<br>
+                    实现页面基本布局，和通过 bootstrap进行栅格系统和媒体查询，实现所有所有设备的适配。通过百分比和 rem 单位布局进行编写bootstrap的组件实现对应功能。
+                  </div>
+                  <div class="content_four">
+                    项目名称：<span class="orange">远大空品后台管理</span><br>
+                    应用技术：1.使用 vue+vue-cli脚手架进行项目构建;  <br>
+                    2.使用 vue-router 在 router、对象配置路由，在 router-view 显示路由的跳转;  <br>
+                    3.使用 vuex进行组件间的数据双向绑定,对项目公共数据和方法进行储存  <br>
+                    4.使用 element-ui 中的组件进行页面布局  <br>
+                    5.使用 axios 通过接口文档向后端发送指定的请求; <br>
+                    项目描述：提供了可视化的能管理权限和空气进化产品的订单，库存，价格等数据的后台系统，能够对用户和
+                    产品信息，及订单详情，进行修改，添加删除等操作。 <br>
+                    职责描述：1.负责空气净化产品“产品详情页”,“用户信息”模块实现； <br>
+                    2.参照接口文档 axios 发送请求，配和后端完成数据交互； <br>
+                    3.参与项目组件的封装及插件的选取和组件默认样式的修改。 <br>
+                  </div>
+                </div>
+              </span>
+            </div>
+            <div>
+              <img src="./img/full-5.jpg" alt="" /><span
+                >&emsp;工作经验
+                <div class="content">
+                    <div class="content_two">
+                        <pre>
+2020.05 ~ 2021.06	 武汉网慧天下科技有限公司	web前端
+工作描述：
+1.负责前端开发(包含PC、移动端、微信小程序)
+2.Web前端表现层及与后端交互的设计和开发;
+3.根据产品需求确定前端开发的实施方案、编码;
+4.保持页面在不同浏览器及分辨率下良好的兼容性,使结构、表现、行为的分离;
+5.前端功能完成的同时,考虑用户体验，可维护性，页面渲染速度等各种优化问题;
+6.优化前端功能设计,解决各种浏览器和移动端的兼容性问题。</pre>
+                    </div>
+                </div>
+              </span>
+            </div>
+            <div>
+              <img src="./img/full-6.jpg" alt="" /><span
+                >&emsp;毕业设计
+                <div class="content">
+                    <div class="content_two">
+                        <pre>
+1.hc游戏道具城（毕业设计）
+应用技术：前台界面(JQuery+CSS3+bootstrap)、
+         后台管理(vue+vue-cli)、后台(node express Mysql)
+项目描述：
+1.通过nodejs的crawler包先爬取对应的资源保存到通过squelize保存mysql中。
+2.编写路由，并导入主模块，写用户和游戏道具列表的接口文件
+3.通过对应接口的逻辑配和squelize实现对应功能，通过postman进行测试
+4.用vue编写后台管理系统，登录用token进行权限验证，通过axios发送请求
+5.其他通过css3+JQuery实现基本布局和逻辑
+                        </pre>
+                    </div>
 
                 </div>
+              </span>
             </div>
-            <div class="slide">
-                <h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3>
-            </div>
-            <div class="slide">
-                <h3>太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</h3>
-            </div>
+          </div>
         </div>
-        <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
-        <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
-        <div class="section">太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。</div>
+        <div class="slide">
+          <div class="jianli">
+            
+          </div>
+          <div class="janli_button">
+              <div class="selected" data-imgnum="1"></div>
+              <div  data-imgnum="2"></div>
+          </div>
 
+        </div>
+      </div>
+      <div class="section"> 太懒了  更新中 </div>
+      <div class="section">
+        太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。
+      </div>
+      <div class="section">
+        太懒了暂未写完！》》》》。。。。。。。。。。。。。。。。。
+      </div>
     </div>
-</body>
+  </body>
 
-
-
-<script>
-
-
-
+  <script>
     $(function () {
-        $('#dowebok').fullpage({
-            sectionsColor: ['rgba(0,0,0,0)', '#4BBFC3', '#7BAABE', '#f90'],
-        });
+      $("#dowebok").fullpage({
+        sectionsColor: ["rgba(0,0,0,0)", "#4BBFC3", "#7BAABE", "#f90"],
+      });
     });
-
-
-
-</script>
-<script src="./js/首页.js"></script>
+  </script>
+  <script src="./js/首页.js"></script>
 </html>
